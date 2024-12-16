@@ -1,6 +1,7 @@
 package com.asworld.journalApp.service;
 
 import com.asworld.journalApp.entity.User;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.extension.ExtensionContext;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.ArgumentsProvider;
