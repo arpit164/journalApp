@@ -27,7 +27,7 @@ public class UserRepositoryImpl {
 //                Criteria.where("sentimentAnalysis").is(true))
 //        );
 
-        //validate email via regex
+        //validate email by regex
         query.addCriteria(Criteria.where("email").regex("^[A-Za-z0-9._%+-]+@[A-Za-z0-9._]+\\.[A-Z|a-z]{2,6}$"));
         query.addCriteria(Criteria.where("sentimentAnalysis").is(true));
 

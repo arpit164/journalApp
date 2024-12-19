@@ -31,7 +31,7 @@ public class UserDetailsServiceImplTest {
         MockitoAnnotations.openMocks(this);
     }
 
-//    @Test
+    @Test
     void loadUserByUsernameTest(){
         when(userRepository.findByUserName(ArgumentMatchers.anyString()))
                 .thenReturn(User.builder().userName("ram").password("inrinrick").roles(new ArrayList<>()).build());

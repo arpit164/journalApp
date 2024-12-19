@@ -2,8 +2,10 @@ package com.asworld.journalApp.controller;
 
 import com.asworld.journalApp.cache.AppCache;
 import com.asworld.journalApp.entity.User;
+import com.asworld.journalApp.service.EmailService;
 import com.asworld.journalApp.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,6 +21,17 @@ public class AdminController {
 
     @Autowired
     private AppCache appCache;
+
+    @Autowired
+    private EmailService emailService;
+
+    //for sending email
+    @Value("${emailData.sendTo}")
+    private String sendTo;
+    @Value("${emailData.subject}")
+    private String subject;
+    @Value("${emailData.body}")
+    private String body;
 
     @GetMapping("all-users")
     public ResponseEntity<?> getAllUsers(){
@@ -37,5 +50,12 @@ public class AdminController {
     @GetMapping("clear-app-cache")
     public void clearAppCache(){
         appCache.init();
+    }
+
+    @GetMapping("sendMail")
+    public ResponseEntity<?> sendMail(){
+        emailService.sendEmail(sendTo, subject, body);
+
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 }

@@ -11,11 +11,11 @@
         <File>
             journalApp.log<!-- create file named as this at project's root location  -->
         </File>
-        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
-            <fileNamePattern>journalApp-%d{yy-MM-dd_HH-mm}.%i.log</fileNamePattern>
-            <maxFileSize>10MB</maxFileSize><!-- after getting file size 10MB create new file-->
-            <maxHistory>10</maxHistory><!-- after getting 10 files automatically delete 1st file-->
-        </rollingPolicy>
+<!--        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">-->
+<!--            <fileNamePattern>journalApp-%d{yy-MM-dd_HH-mm}.%i.log</fileNamePattern>-->
+<!--            <maxFileSize>10MB</maxFileSize>&lt;!&ndash; after getting file size 10MB create new file&ndash;&gt;-->
+<!--            <maxHistory>10</maxHistory>&lt;!&ndash; after getting 10 files automatically delete 1st file&ndash;&gt;-->
+<!--        </rollingPolicy>-->
         <encoder>
             <pattern>
                 %d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n

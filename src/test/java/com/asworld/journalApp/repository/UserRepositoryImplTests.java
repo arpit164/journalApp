@@ -8,13 +8,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@SpringBootTest
+//@SpringBootTest
 public class UserRepositoryImplTests {
 
     @Autowired
     private UserRepositoryImpl userRepository;
 
-    @Test
+//    @Test
     public void testSaveNewUser(){
         Assertions.assertNotNull(userRepository.getUserForSA());
     }

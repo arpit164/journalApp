@@ -14,7 +14,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-//@SpringBootTest
+@SpringBootTest
 public class UserServiceTests {
 
     @Autowired
@@ -23,8 +23,8 @@ public class UserServiceTests {
     @Autowired
     private UserService userService;
 
-//    @Disabled
-//    @Test
+    @Disabled
+    @Test
     public void testFindByUserName(){
 //        assertEquals(4, 2+2);
 //        assertNotNull(userRepository.findByUserName("ram"));
@@ -33,18 +33,19 @@ public class UserServiceTests {
         assertFalse(user.getJournalEntries().isEmpty());
     }
 
-//    @ParameterizedTest
-//    @CsvSource({
-//            "1,1,2",//"a, b, expected"
-//            "2,10,12",
-//            "3,3,9"
-//    })
-//    public void test(int a, int b, int expected){
-//        assertEquals(expected, a + b);
-//    }
+    @Disabled
+    @ParameterizedTest
+    @CsvSource({
+            "1,1,2",//"a, b, expected"
+            "2,10,12",
+            "3,3,9"
+    })
+    public void test(int a, int b, int expected){
+        assertEquals(expected, a + b);
+    }
 
-//    @Disabled
-//    @ParameterizedTest
+    @Disabled
+    @ParameterizedTest
     @ValueSource(strings = {
             "ram",//"a, b, expected"
             "shyam",
@@ -54,9 +55,9 @@ public class UserServiceTests {
         assertNotNull(userRepository.findByUserName(uname), "failed for: " + uname);
     }
 
-////    @Disabled
-////    @ParameterizedTest
-//    @ArgumentsSource(UserArgumentsProvider.class)
+    @Disabled
+    @ParameterizedTest
+    @ArgumentsSource(UserArgumentsProvider.class)
     public void parameterizedTestArgsSaveNewUser(User user){
         assertTrue(userService.saveNewUser(user));
     }

@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Component
 public class WeatherService {
-    @Value("${weather_api_key}")
+    @Value("${weather.api.key}")
     private String apiKey;
 
     @Autowired
