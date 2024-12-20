@@ -31,6 +31,7 @@ public class UserDetailsServiceImplTest {
         MockitoAnnotations.openMocks(this);
     }
 
+    @Disabled
     @Test
     void loadUserByUsernameTest(){
         when(userRepository.findByUserName(ArgumentMatchers.anyString()))

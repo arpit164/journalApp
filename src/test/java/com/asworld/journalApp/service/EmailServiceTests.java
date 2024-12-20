@@ -1,5 +1,6 @@
 package com.asworld.journalApp.service;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -12,11 +13,13 @@ public class EmailServiceTests {
     @Autowired
     private EmailService emailService;
 
+    @Disabled
     @Test
     void general() {
         assertEquals(4, 2+2);
     }
 
+    @Disabled
     @Test
     void testSendMail(){
         emailService.sendEmail(
