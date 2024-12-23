@@ -15,12 +15,6 @@ public class EmailServiceTests {
 
     @Disabled
     @Test
-    void general() {
-        assertEquals(4, 2+2);
-    }
-
-    @Disabled
-    @Test
     void testSendMail(){
         emailService.sendEmail(
                 "kicom13448@rabitex.com",
