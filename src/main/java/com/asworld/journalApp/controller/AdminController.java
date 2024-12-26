@@ -4,6 +4,7 @@ import com.asworld.journalApp.cache.AppCache;
 import com.asworld.journalApp.entity.User;
 import com.asworld.journalApp.service.EmailService;
 import com.asworld.journalApp.service.UserService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -14,6 +15,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("admin")
+@Tag(name = "Admin APIs")
 public class AdminController {
 
     @Autowired
